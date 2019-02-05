@@ -1,0 +1,2 @@
+# ignore all .npy arrays to bypass github's size limit
+*.npy
