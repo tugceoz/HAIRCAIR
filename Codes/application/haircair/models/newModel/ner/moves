@@ -1,0 +1,32 @@
+Å´transitions⁄í[
+  {
+    "clas":0,
+    "move":1,
+    "label":"Product",
+    "name":"B-Product"
+  },
+  {
+    "clas":1,
+    "move":2,
+    "label":"Product",
+    "name":"I-Product"
+  },
+  {
+    "clas":2,
+    "move":3,
+    "label":"Product",
+    "name":"L-Product"
+  },
+  {
+    "clas":3,
+    "move":4,
+    "label":"Product",
+    "name":"U-Product"
+  },
+  {
+    "clas":4,
+    "move":5,
+    "label":"",
+    "name":"O"
+  }
+]

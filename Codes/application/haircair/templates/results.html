@@ -1,0 +1,167 @@
+{% extends "layout.html" %}
+
+
+{% block head %}
+<title> HAIRCAIR  </title>
+{% endblock %}
+
+<style>
+    #data {
+        border: solid 2px blue;
+        width: 100px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+#data:hover{
+    overflow: visible;
+    white-space: normal;
+    width: auto;
+    
+}
+</style>
+
+{% block body %}
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="/"> H<font color=#800000>AI</font>RC<font color=#800000>AI</font>r</a></li>
+                <!--li><a href="/validate">HELP VALIDATE!</a></li-->
+                <li><a href="https://www.linkedin.com/in/tugce-ozturk/" target="_blank">Tugce's LinkedIn</a></li>
+                <li><a href="http://www.github.com/tugceoz/HAIRCAIR" target="_blank">Github</a></li>
+                </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col-sm-2" *ngFor="similar images">
+            <form method="POST" action='/' enctype = "multipart/form-data">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn-xs btn-danger" type="submit"> Upload</button>
+                    </span>
+                    <input type = "file" name = "file">
+                        </div><!-- /input-group -->
+            </form>
+        </div>
+        <div class="col-sm-2" *ngFor="similar images">
+            <figure>
+                <img >
+                    </figure>
+        </div>
+        <div class="col-sm-2" *ngFor="similar images">
+            <figure>
+                <img class="userpic" src={{"static/img/tmp/"+original}} alt="Uploaded image" style="height:200px">
+                    <figcaption> User uploaded image </figcaption>
+                    </figure>
+        </div>
+    </div>
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-2" *ngFor="similar images">
+                <figure>
+                    <a href={{matches['redditURL'][0]}} target="_blank">
+                        <img src={{matches['imageURL'][0]}} title={{matches['imgfile'][0]}} style="height:200px"/>
+                        <figcaption> First similar image </figcaption>
+                    </a>
+                </figure>
+            </div>
+            
+            <div class="col-sm-2" *ngFor="similar images">
+                <figure>
+                    <a href={{matches['redditURL'][1]}} target="_blank">
+                        <img src={{matches['imageURL'][1]}} title={{matches['imgfile'][1]}} style="height:200px"/>
+                        <figcaption> Second similar image </figcaption>
+                    </a>
+                </figure>
+                  <p>&nbsp;</p>
+            </div>
+            
+            <div class="col-sm-2" *ngFor="similar images">
+                <figure>
+                    <a href={{matches['redditURL'][2]}} target="_blank">
+                        <img src={{matches['imageURL'][2]}} title={{matches['imgfile'][2]}} style="height:200px"/>
+                        <figcaption> Third similar image </figcaption>
+                    </a>
+                </figure>
+                  <p>&nbsp;</p>
+            </div>
+            
+            <div class="col-sm-2" *ngFor="similar images">
+                <figure>
+                    <a href={{matches['redditURL'][3]}} target="_blank">
+                        <img src={{matches['imageURL'][3]}} title={{matches['imgfile'][3]}} style="height:200px"/>
+                        <figcaption> Fourth similar image </figcaption>
+                    </a>
+                </figure>
+                  <p>&nbsp;</p>
+            </div>
+            
+            <div class="col-sm-2" *ngFor="similar images">
+                <figure>
+                    <a href={{matches['redditURL'][4]}} target="_blank">
+                        <img src={{matches['imageURL'][4]}} title={{matches['imgfile'][4]}} style="height:200px"/>
+                        <figcaption> Fifth similar image </figcaption>
+                    </a>
+                </figure>
+                  <p>&nbsp;</p>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="container2">
+        <div class="row text-center">
+            <div class="col-sm-2" *ngFor="similar images">
+                <p class="text-center" style="font-size:18px;" > <font color=#800000>{{product1}}</font> </p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </div>
+            <div class="col-sm-2" *ngFor="similar images">
+                <p class="text-center" style="font-size:18px;"> <font color=#800000>{{product2}}</font> </p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </div>
+            <div class="col-sm-2" *ngFor="similar images">
+                <p class="text-center" style="font-size:18px;"> <font color=#800000>{{product3}}</font> </p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </div>
+            <div class="col-sm-2" *ngFor="similar images">
+                <p class="text-center" style="font-size:18px;"> <font color=#800000>{{product4}}</font> </p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </div>
+            <div class="col-sm-2" *ngFor="similar images">
+                <p class="text-center" style="font-size:18px;"> <font color=#800000>{{product5}}</font> </p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </div>
+        </div>
+</div>
+
+
+</body>
+
+<script type="text/javascript" src="/static/js/index.js"></script>
+
+
+{% endblock %}
