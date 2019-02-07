@@ -1,6 +1,6 @@
 # HAIRCAIR
 
-HAIRCAIR is an AI powered product that provides personalized hair care solutions to its users. 
+HAIRCAIR is a deep learning powered product that provides personalized hair care solutions to its users. 
 
 It matches user uploaded headshot pictures with reddit posts that have a similar headshot image, and extracts the hair product names from the post comments and replies. 
 
