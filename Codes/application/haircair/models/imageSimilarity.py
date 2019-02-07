@@ -44,7 +44,7 @@ def find_matches(pred, #features from user selected image
             sims.append(distance.cosine(pred.flatten(),
                                         features[i].flatten()))
     print('max sim = ' +str(max(sims)))
-    similar_images=pd.DataFrame({'imgfile':images['imgfile'],
+    similar_images=pd.DataFrame({'imgfile':images,
                                  'simscore':sims})
     return(similar_images)
 

@@ -5,23 +5,6 @@
 <title> HAIRCAIR  </title>
 {% endblock %}
 
-<style>
-    #data {
-        border: solid 2px blue;
-        width: 100px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-
-#data:hover{
-    overflow: visible;
-    white-space: normal;
-    width: auto;
-    
-}
-</style>
-
 {% block body %}
 
 <nav class="navbar navbar-default">
@@ -29,7 +12,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="/"> H<font color=#800000>AI</font>RC<font color=#800000>AI</font>r</a></li>
+                <li><a href="/"> H<font color=#800000>AI</font>RC<font color=#800000>AI</font>R</a></li>
                 <!--li><a href="/validate">HELP VALIDATE!</a></li-->
                 <li><a href="https://www.linkedin.com/in/tugce-ozturk/" target="_blank">Tugce's LinkedIn</a></li>
                 <li><a href="http://www.github.com/tugceoz/HAIRCAIR" target="_blank">Github</a></li>
@@ -60,7 +43,8 @@
         </div>
         <div class="col-sm-2" *ngFor="similar images">
             <figure>
-                <img class="userpic" src={{"static/img/tmp/"+original}} alt="Uploaded image" style="height:200px">
+                <a href={{original}} target="_blank">
+                <img class="userpic" src={{original}} alt="Uploaded image" style="height:200px">
                     <figcaption> User uploaded image </figcaption>
                     </figure>
         </div>
@@ -122,40 +106,89 @@
             
         </div>
     </div>
-    
     <div class="container2">
-        <div class="row text-center">
-            <div class="col-sm-2" *ngFor="similar images">
-                <p class="text-center" style="font-size:18px;" > <font color=#800000>{{product1}}</font> </p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-            </div>
-            <div class="col-sm-2" *ngFor="similar images">
-                <p class="text-center" style="font-size:18px;"> <font color=#800000>{{product2}}</font> </p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-            </div>
-            <div class="col-sm-2" *ngFor="similar images">
-                <p class="text-center" style="font-size:18px;"> <font color=#800000>{{product3}}</font> </p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-            </div>
-            <div class="col-sm-2" *ngFor="similar images">
-                <p class="text-center" style="font-size:18px;"> <font color=#800000>{{product4}}</font> </p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-            </div>
-            <div class="col-sm-2" *ngFor="similar images">
-                <p class="text-center" style="font-size:18px;"> <font color=#800000>{{product5}}</font> </p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-            </div>
+        <div class="col-sm-2" *ngFor="similar images">
+        <table class="table table-hover">
+            <tr>
+                <th style="color:white; background-color:#808080; align=center;">
+                Product names
+                </th>
+            </tr>
+            {% for prod1 in product1 %}
+            <tr>
+                <td>
+                    {{prod1['pro1']}}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
         </div>
+        <div class="col-sm-2" *ngFor="similar images">
+        <table class="table table-hover">
+            <tr>
+                <th style="color:white; background-color:#808080; align=center;">
+                    Product names
+                </th>
+            </tr>
+            {% for prod2 in product2 %}
+            <tr>
+                <td>
+                    {{prod2['pro2']}}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        </div>
+        <div class="col-sm-2" *ngFor="similar images">
+        <table class="table table-hover">
+            <tr>
+                <th style="color:white; background-color:#808080; align=center;">
+                    Product names
+                </th>
+            </tr>
+            {% for prod3 in product3 %}
+            <tr>
+                <td>
+                    {{prod3['pro3']}}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        </div>
+        <div class="col-sm-2" *ngFor="similar images">
+        <table class="table table-hover">
+            <tr>
+                <th style="color:white; background-color:#808080; align=center;">
+                    Product names
+                </th>
+            </tr>
+            {% for prod4 in product4 %}
+            <tr>
+                <td>
+                    {{prod4['pro4']}}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        </div>
+        <div class="col-sm-2" *ngFor="similar images">
+        <table class="table table-hover">
+            <tr>
+                <th style="color:white; background-color:#808080; align=center;">
+                    Product names
+                </th>
+            </tr>
+            {% for prod5 in product5 %}
+            <tr>
+                <td>
+                    {{prod5['pro5']}}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+</div>
+        
+    </div>
 </div>
 
 
